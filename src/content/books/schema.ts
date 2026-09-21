@@ -1,9 +1,8 @@
-import { file } from "astro/loaders";
+import { glob } from "astro/loaders";
 import { z } from "astro/zod";
 import { defineCollection } from "astro:content";
 
 export const bookSchema = z.object({
-  id: z.string(),
   title: z.string(),
   author: z.string(),
   rating: z.number(),
@@ -13,6 +12,6 @@ export const bookSchema = z.object({
 export type Book = z.infer<typeof bookSchema>;
 
 export const booksCollection = defineCollection({
-  loader: file("src/content/books/books.json"),
+  loader: glob({ base: "src/content/books", pattern: "*.md" }),
   schema: bookSchema,
 });

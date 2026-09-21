@@ -9,10 +9,6 @@ const books = await getCollection("books");
 <BaseLayout>
   <div class="content">
     <h2>Books</h2>
-    {books.length > 0 ? (
-      books.map((book) => <BookCard book={book.data} />)
-    ) : (
-      <p>No books to show!</p>
-    )}
+    {books.length > 0 ? books.map((book) => <BookCard book={book} />) : <p>No books to show!</p>}
   </div>
 </BaseLayout>
