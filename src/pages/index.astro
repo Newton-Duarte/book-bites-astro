@@ -1,10 +1,14 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+
+const user = {
+  name: "Mario",
+};
 ---
 
 <BaseLayout>
   <div class="content">
-    <h2>Welcome</h2>
+    <h2>Welcome, {user.name}</h2>
     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis, voluptate!</p>
     <a href="/books">Take a look at my reviews</a>
   </div>
