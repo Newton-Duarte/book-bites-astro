@@ -1,10 +1,7 @@
 ---
+import BookCard from "../../components/BookCard.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
-
-interface Book {
-  title: string;
-  author: string;
-}
+import type { Book } from "../../types/book";
 
 const books: Book[] = [
   { title: "The Name of The Wind", author: "Patrick Rothfuss" },
@@ -17,39 +14,6 @@ const books: Book[] = [
 <BaseLayout>
   <div class="content">
     <h2>Books</h2>
-    {books.length > 0 ? (
-      books.map((book) => (
-        <div class="book-card">
-          <p class="book-title">{book.title}</p>
-          <p class="book-author">{book.author}</p>
-        </div>
-      ))
-    ) : (
-      <p>No books to show!</p>
-    )}
+    {books.length > 0 ? books.map((book) => <BookCard book={book} />) : <p>No books to show!</p>}
   </div>
 </BaseLayout>
-
-<style>
-  h2 {
-    padding-right: 10px;
-    border-right: 8px solid #ebe5f2;
-    border-bottom: 8px solid #f9f6fc;
-    margin-bottom: 40px;
-    text-align: right;
-  }
-  .book-card {
-    background-color: #f9f6fc;
-    padding: 16px 20px;
-    margin: 20px auto;
-    box-shadow: 8px 8px 0 #ebe5f2;
-  }
-  .book-title {
-    font-size: 1.4em;
-    font-weight: bold;
-    margin: 0;
-  }
-  .book-author {
-    margin-top: 0;
-  }
-</style>
