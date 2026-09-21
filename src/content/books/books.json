@@ -1,0 +1,37 @@
+[
+  {
+    "id": "1",
+    "title": "The Name of the Wind",
+    "author": "Patrick Rothfuss",
+    "rating": 9,
+    "summary": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, reprehenderit."
+  },
+  {
+    "id": "2",
+    "title": "The Will of the Many",
+    "author": "James Islington",
+    "rating": 7,
+    "summary": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, reprehenderit."
+  },
+  {
+    "id": "3",
+    "title": "Assasin's Apprentice",
+    "author": "Robin Hobb",
+    "rating": 8,
+    "summary": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, reprehenderit."
+  },
+  {
+    "id": "4",
+    "title": "The Blade Itself",
+    "author": "Joe Abercrombie",
+    "rating": 8,
+    "summary": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, reprehenderit."
+  },
+  {
+    "id": "5",
+    "title": "The Final Empire",
+    "author": "Brandon Sanderson",
+    "rating": 7,
+    "summary": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, reprehenderit."
+  }
+]

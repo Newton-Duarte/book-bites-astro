@@ -1,5 +1,5 @@
 ---
-import type { Book } from "../types/book";
+import type { Book } from "../content/books/schema";
 
 interface Props {
   book: Book;
@@ -9,18 +9,15 @@ const { book } = Astro.props;
 ---
 
 <div class="book-card">
-  <p class="book-title">{book.title}</p>
-  <p class="book-author">{book.author}</p>
+  <p class="book-title">
+    {book.title}, {book.rating}/10
+  </p>
+  <p class="book-author">by {book.author}</p>
+  <p class="book-summary">{book.summary}</p>
+  <a href="">Read Review</a>
 </div>
 
 <style>
-  h2 {
-    padding-right: 10px;
-    border-right: 8px solid #ebe5f2;
-    border-bottom: 8px solid #f9f6fc;
-    margin-bottom: 40px;
-    text-align: right;
-  }
   .book-card {
     background-color: #f9f6fc;
     padding: 16px 20px;
@@ -34,5 +31,8 @@ const { book } = Astro.props;
   }
   .book-author {
     margin-top: 0;
+  }
+  .book-summary {
+    font-size: 1em;
   }
 </style>
